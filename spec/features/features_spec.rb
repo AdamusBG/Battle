@@ -24,4 +24,11 @@ describe Battle, type: :feature do
     expect(page).to have_content("Successfully hit name2!")
   end
 
+  it "Player 1 can attack player 2 see health reduced by 10" do
+    sign_in_and_play
+    click_button("Attack")
+    click_button("Play")
+    expect(page).to have_content("player 2: name2 -- Health: 90/100")
+  end
+
 end
