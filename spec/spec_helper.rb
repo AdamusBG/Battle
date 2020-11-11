@@ -97,4 +97,21 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+
+  # Setting environmental variable RACK_ENV
+  ENV['RACK_ENV'] = 'test'
+
+  # Requiring the Sinatra app file, capybara, capybara/rspec and rspec
+  require File.join(File.dirname(__FILE__), '..', 'app.rb')
+
+  require 'capybara'
+  require 'capybara/rspec'
+  require 'rspec'
+
+  # Telling capybara about my app class
+  Capybara.app = Battle
+
+  # Requiring web helpers file
+  require File.join(File.dirname(__FILE__), './features', 'web_helpers.rb')
+
 end
