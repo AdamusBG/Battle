@@ -1,2 +1,6 @@
 <p>player 1: <%=session[:name1]%></p>
 <p>player 2: <%=session[:name2]%> -- Health: 100/100</p>
+
+<form action="/hit" method="post">
+  <input type="submit" name="Attack">Attack</input>
+</form>
