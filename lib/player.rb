@@ -7,7 +7,7 @@ class Player
     @hp = 100
   end
 
-  def attack(other_player)
-    other_player.hp -= 10
-  end
+  # def attack(other_player)
+  #   other_player.hp -= 10
+  # end
 end

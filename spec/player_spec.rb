@@ -8,8 +8,8 @@ describe Player do
     expect(subject.name).to eq("Dingus")
   end
 
-  it "Being hit by an attack reduces health by 10" do
-    expect { subject.attack(doofus) }.to change { doofus.hp }.by(-10)
-  end
+  # it "Being hit by an attack reduces health by 10" do
+  #   expect { subject.attack(doofus) }.to change { doofus.hp }.by(-10)
+  # end
 
 end
